@@ -1,0 +1,24 @@
+<div class = "container" >
+<div class="jumbotron">
+     <h1 class="display-3">Business Scraper</h1>
+       <p>Stay up to date with all of the latest business news</p>
+       <a href="/scrape"> <button type="button" class="btn btn-primary scrape" > Scrape for Articles </button></a>
+</div>
+<div class="article-container">
+
+    {{#each Article}}
+  
+<div class="card card-home" style="width: 20rem;">
+  <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title"><a href= "{{this.link}}" target="_blank">{{this.title}}</a></h4>
+    <p class="card-text">{{this.summary}}</p>
+    <a href="/notes/{{this._id}}" class="btn btn-primary">See Notes</a>
+  </div>
+</div>
+
+
+ {{/each}}
+</div>
+</div>
+

@@ -1,0 +1,60 @@
+
+body{
+	margin-left: 50px;
+}
+.jumbotron {
+ 
+    margin-bottom: 20px;
+    background-image: url(https://cdn-images-1.medium.com/max/762/1*xR4m0oOKz_jRgQU4Oge53g.jpeg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: right;
+    text-shadow: black 0.3em 0.3em 0.3em;
+
+}
+
+.card-home {
+	display:inline-block;
+	margin: 15px;
+
+}
+
+.card-img-top {
+	width: 318px;
+	height: 180px;
+}
+
+h4 {
+	font-size: 20px;
+	 font-family: 'Roboto', sans-serif;	 
+	 padding: 10px;
+	}
+
+h1 {
+ font-family: 'Roboto', sans-serif;
+
+}
+
+p {
+	 font-family: 'Roboto', sans-serif;
+}
+#notep{
+	font-family: 'Roboto', sans-serif;
+	color: white;
+}
+.save-article{
+	background-color: #898E8C;
+	font-family: roboto;
+	color:white;
+	border-color:#ccc;
+	position:relative;
+	left: 50px;
+}
+
+#add-note, #btn-back {
+	position: relative;
+	right: 20px;
+	margin-left:10px;
+}
