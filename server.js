@@ -38,11 +38,30 @@ app.set("view engine", "handlebars");
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
 // Connect to mongo database
-mongoose.connect("mongodb://localhost/testscrape100", {
-  useMongoClient: true
+// mongoose.connect("mongodb://localhost/testscrape100", {
+//   useMongoClient: true
+// });
+
+// var db = mongoose.connection;
+// Database configuration with mongoose
+
+var databaseUri = "mongodb://localhost/testscrape100";
+if (process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI);
+} else {
+  mongoose.connect(databaseUri);
+}
+var db = mongoose.connection;
+
+// Show any mongoose errors
+db.on("error", function(error) {
+  console.log("Mongoose Error: ", error);
 });
 
-var db = mongoose.connection;
+// Once logged in to the db through mongoose, log a success message
+db.once("open", function() {
+  console.log("Mongoose connection successful.");
+});
 
 // Routes
 app.get("/", function (req, res) {
